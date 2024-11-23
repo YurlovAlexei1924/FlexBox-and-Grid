@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+ background-color: #c9a2fcfd;
+ font-size: 24px;
+ line-height: 1;
+ margin:0;
+}
+.navbar {
+ overflow: hidden;
+ background-color: #a1eefffd;
+ position: fixed;
+ top: 0;
+ width: 100%;
+}
+.navbar a {
+ float: left;
+ display: block;
+ color: #ffc021fd;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 22px;
+}
+.navbar a:hover {
+ background: #b65bfcfd;
+ color: #a1eefffd;
+}
+.topnav-right {
+ float: right;
+ color: #ffc021fd;
+}
+.topnav-right a {
+ font-size: 30px;
+}
+
+<!-- .main {
+ margin-top: 30px;
+ padding: 20px;
+ color: dark;
+} -->
+
+header {
+	background: blue;
+	color: #fff;
+	padding: 1rem 0;
+}
+main {
+	padding: 20px;
+	color: black;
+	background-color: #b3fa7dfd;
+}
+.grid-section {
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 20px;
+	margin: 20px 0;
+	background: #f9ffcffd;
+	border-radius: 5px;
+}
+.flex-section {
+	padding: 20px;
+	margin: 20px 0;
+	background: #f9ffcffd;
+	border-radius: 5px;
+}
+.flex-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.project {
+	background: #ffc021fd;
+	color: black;
+	padding: 20px;
+	margin: 20px;
+	flex: 1 1 5%; /* Ширина 30% с возможностью сжатия и расширения */
+	border-radius: 5px;
+	text-align: center;
+}
+.project:hover {
+ background: #b3fa7dfd;
+ color: black;
+}
+footer {
+	text-align: center;
+	padding: 10px 0;
+	background: #a1eefffd;
+	color: #ffc021fd;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	font-size: 50px;
+}
+
+</style>
+
+<!-- <style>
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+header {
+	background: orangered;
+}
+main {
+	background: darkslateblue;
+}
+footer {
+	background: deeppink;
+}
+.left-sidebar1 {
+	background: dodgerblue;
+}
+.right-sidebar1 {
+	background: forestgreen;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+}
+@media all and (min-width: 768px) {
+	.container {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	header,
+	footer {
+		width: 100%;
+	}
+	main{
+		flex: 2;
+		order: 2;
+		min-height: 80vh;
+	}
+	.left-sidebar1{
+		order: 1;
+		flex: 1;
+	}
+	.right-sidebar1{
+		flex: 1;
+		order: 3;
+	}
+	footer {
+		order: 4;
+	}
+}
+</style> -->
+
+<!-- <style>
+.gr_header { line-height: 1.5; grid-area: header; background: #6c00bffd;}
+.gr_footer { line-height: 1.5; grid-area: footer; background: #6c00bffd;}
+.gr_main { line-height: 1.5; grid-area: main; background: white;}
+.gr_left { grid-area: left; background: #blue;}
+.gr_right { grid-area: right; background: #blue;}
+.gr {
+	display: grid;
+	grid-template-areas: "header header header"
+						 "left main right"
+						 "footer footer footer";
+	grid-template-columns: 623px 623px 623px;
+	grid-template-rows: 100px
+						1fr
+						100px;
+	min-height: 100vh;
+}
+@media screen and (max-width: 600px) {
+	.gr {
+		grid-template-areas: "header"
+							 "left"
+							 "main"
+							 "right"
+							 "footer";
+	grid-template-columns: 100%;
+	grid-template-rows: 100px
+						50px
+						1fr
+						50px
+						30px;
+	}
+}
+
+</style> -->
+
+<!-- <style>
+body {
+	color: white;
+	text-align: center;
+	font-size: 24px;
+	line-height: 3;
+}
+.gr_header { grid-area: header; background: orangered;}
+.gr_footer { grid-area: footer; background: deeppink;}
+.gr_main { grid-area: main; background: darkslateblue;}
+.gr_left { grid-area: left; background: dodgerblue}
+.gr_right { grid-area: right; background: forestgreen;}
+.gr {
+	display: grid;
+	grid-template-areas: "header header header"
+						 "left main right"
+						 "footer footer footer";
+	grid-template-columns: 150px 1fr 150px;
+	grid-template-rows: 100px
+						1fr
+						100px;
+	min-height: 100vh;
+}
+@media screen and (max-width: 600px) {
+	.gr {
+		grid-template-areas: "header"
+							 "left"
+							 "main"
+							 "right"
+							 "footer";
+	grid-template-columns: 100%;
+	grid-template-rows: 100px
+						50px
+						1fr
+						50px
+						30px;
+	}
+}
+</style> -->
+
+</head>
+
+<body>
+
+<header class="gr_header">
+<div id="home" class="navbar">
+ <a href="#story"><i><b>Story</b></i></a>
+ <a href="#menu"><i><b>Bouquets</b></i></a>
+ <a href="#contacts"><i><b>Contacts</b></i></a>
+ <div class="topnav-right">
+ <a href="#home"><i><b>Flowers</b></i></a>
+ </div>
+ </div>
+</div>
+</header>
+
+<main>
+<section id="about" class="grid-section">
+    <h2>Story</h2>
+    <p>Some interesting story.</p>
+</section>
+        
+<section id="menu" class="flex-section">
+    <h2>Bouquets</h2>
+    <div class="flex-container">
+        <div class="project"><b>Wedding</b></div>
+        <div class="project"><b>New items</b></div>
+        <div class="project"><b>Budget</b></div>
+		<div class="project"><b>In the basket</b></div>
+		<div class="project"><b>Assemble it yourself</b></div>
+    </div>
+</section>
+        
+<section id="contacts" class="grid-section">
+    <h2>Contacts</h2>
+    <p>Telephone: +7(904)920-89-31</p>
+	<p>Address: Gagarin Avenue, building 52, entrance 2.</p>
+</section>
+</main>
+
+<footer>
+    <p><i><b>Flowers</b></i></p>
+</footer>
+
+</body>
+
+</html>
